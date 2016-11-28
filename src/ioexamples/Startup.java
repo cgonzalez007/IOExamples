@@ -36,7 +36,7 @@ public class Startup {
      * @param args
      * @throws java.io.IOException
          */
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException{
         /*PART #1: 
             File Reader*/
 	File data = new File("src" + File.separatorChar 
@@ -81,26 +81,35 @@ public class Startup {
             out.println("Hartland, WI 53029");*/
 	  out.close();  
 	
-	  System.out.println("Wrote file to: " + data.getAbsolutePath());
+	  System.out.println("\nWrote file to: " + data2.getAbsolutePath());
           
           
           /*After completing #2, find the contact that is second on your list and output their
             state. Do this using Java File I/O and programming only. Your output should look
             like similar to this:*/
-          /*Sean Connery state: Detroit*/
+          /*Sean Connery state: MI*/
          File data3 = new File("src" + File.separatorChar 
                         + "contactList.txt");
          in = null;
         try {
-	   in = new BufferedReader(new FileReader(data));
+	   in = new BufferedReader(new FileReader(data3));
 	   String line = in.readLine();
            int recordCounter = 1;
-           final int RECORD_TO_FIND = 2;
+           final int RECORD_TO_FIND = 42;
            
-                for(; recordCounter < RECORD_TO_FIND ; recordCounter++){
+                for(; recordCounter < RECORD_TO_FIND; recordCounter++){
                     line = in.readLine();
+                    if(line == null){
+                        break;
+                    }
                     line = in.readLine();
-                    line = in.readLine();
+                    if(line == null){
+                        break;
+                    }
+                    line = in.readLine(); 
+                    if(line == null){
+                        break;
+                    }
                 }
                 if(recordCounter == RECORD_TO_FIND){
                     line = in.readLine();
@@ -108,7 +117,9 @@ public class Startup {
                     String[] lineArray = line.split(", ");
                     String[] lineArray2 = lineArray[1].split(" ");
                     String state = lineArray2[0];
-                    System.out.println("Sean Connery state: " + state);
+                    System.out.println("\nSean Connery state: " + state);
+                }else{
+                    System.out.println("Record not found");
                 }
                 
 	 

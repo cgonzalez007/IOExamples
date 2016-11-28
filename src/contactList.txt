@@ -13,3 +13,6 @@ Waukesha, WI 53186
 Bob Johnson
 222 Wherever St
 Hartland, WI 53029
+John Doe
+301 Imagination Ln
+Los Angeles, CA 22222

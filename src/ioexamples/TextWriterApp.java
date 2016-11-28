@@ -31,12 +31,12 @@ public class TextWriterApp{
 	  // print statements do actual work of writing data
 	  // note that print statements work similar to Sytem.out.println,
 	  // where data is converted to strings
-            out.println("Chris Gonzalez");
+           /* out.println("Chris Gonzalez");
             out.println("301 CandyLand Ave");
             out.println("Waukesha, WI 53186");
             out.println("Bob Johnson");
             out.println("222 Wherever St");
-            out.println("Hartland, WI 53029");
+            out.println("Hartland, WI 53029");*/
 	  out.close();  // be sure you close your streams when done!!
 	
 	  System.out.println("Wrote file to: " + data.getAbsolutePath());
